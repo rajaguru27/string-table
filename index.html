@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+    <html>
+	     <head>
+		      <title>String</title>
+			  <link rel="stylesheet" href="css/style.css">
+			  <meta charset="UTF-8">
+			  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+			  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+			<style>
+				table,th,td{
+				 border:1px solid black;
+				border-collapse:collapse;
+				text-align:center;
+			</style>
+		 </head>
+		 <body>
+	<table>
+	<tr>
+	<tr>
+	<th>Method</th>
+	<th>Working</th>
+	<th>Example</th>
+	<th>Output</th>
+	</tr>
+	<tr>
+	<td>length</td>
+	<td>calculates the lengthof the string</td>
+	<td>var a="abcde";<br>
+        var b=a.length;<br>
+       document.write(b);</td>
+	<td>5</td>
+	</tr>
+	<tr>
+	<td>slice()</td>
+	<td>slice of a part of string(start-index number,end-index number(not includes)</td>
+	<td>
+	var a="abcde";<br>
+	var b=a.length<br>
+	document.write(b);</td>
+	<td>ru,ban</td>
+	</tr>
+	<tr>
+	<td>substring()</td>
+	<td>similiar to slice but negative values taken as zero</td>
+	<td>var a="guru,martin,anand";<br>
+		var b=a.substring(7,13);<br>
+		document.write(b);</td>
+	<td>rtin,a</td>
+	</tr>
+	<tr>
+	<td>substr()</td>
+	<td>similiar to splice in arrays(index postion,elementto be removed)</td>
+	<td>var a="guru,martin,anand";<br>
+		var b=a.substr(7,6);<br>
+		document.write(b);</td>
+	<td>rtin,a</td>
+	</tr>
+	<tr>
+	<td rowspan="3">replace</td>
+	<td rowspan="3">Replce the character of the originqal string with deired characters</td>
+	<td>
+		var a="please visit microsoft";<br>
+		var b=a.replace("microsoft","software");<br>
+		document.write(b);<br><br>
+	</td>
+	<td>please visit software</td>
+	</tr>
+	<tr>
+	<td>var a="please vist microsoft and microsoft";<br>
+		varb=a.replace("microsoft/i","software");<br>
+		document.write(b);<br><br></td>
+		<td>please vist microsoft and microsoft</td>
+	</tr>
+	<tr>
+	<td>var a="please vist microsoft and microsoft";<br>
+		var b=a.replace(/microsoft/g,"software");<br>
+		document.write(b);</td>
+		<td>please vist software and software</td>
+	</tr>
+	<tr>
+	<td>Replce All</td>
+	<td>Replce the character of the originqal string with deired characters</td>
+	<td>var a="this number is my phone number";<br>
+		var b=a.replaceAll("number","No");<br>
+		document.write(b);</td>
+	<td>this No is my phone No</td>
+	</tr>
+	<tr>
+	<td>Upper case</td>
+	<td>Changes all the character to upper case</td>
+	<td>var a="guru";<br>
+		var b=a.toUpperCase();<br>
+		document.write(b);</td>
+	<td>GURU</td>
+	</tr>
+	<tr>
+	<td>to lowercasse</td>
+	<td>Changes all the character to lower case</td>
+	<td>
+		var a="GURU";<br>
+		var b=a.toLowerCase();<br>
+		document.write(b);</td>
+	<td>guru</td>
+	</tr>
+	<tr>
+	<td>concat</td>
+	<td>combines string character</td>
+	<td>var a="Hello";<br>
+		var b="world";<br>
+		var c=a.concat(" ",b);<br>
+		document.write(c);</td>
+	<td>Hello world</td>
+	</tr>
+	<tr>
+	<td>trim</td>
+	<td>Trims the space at start and end of the string and not in between</td>
+	<td>var a="       Hello world!     ";<br>
+		var b=a.trim();<br>
+		document.write(b);</td>
+	<td>Hello world!</td>
+	</tr>
+	<tr>
+	<td>trimStart</td>
+	<td>Trims the space at start of the string and not in between and end</td>
+	<td>var a="       Hello world!     ";<br>
+		var b=a.trimstart();<br>
+		document.write(b);</td>
+	<td>Hello world!</td>
+	</tr>
+	<tr>
+	<td>trimend</td>
+	<td>Trims the space at end of the string and not in between and start</td>
+	<td>var a="       Hello world!     ";<br>
+		var b=a.trimend();<br>
+		document.write(b);</td>
+	<td>Hello world!</td>
+	</tr>
+	<tr>
+	<td>padstart</td>
+	<td>Change the string into desired lengthby adding character atthe start</td>
+	<td>var a="50";<br>
+		var b=a.padStart(4,"0");<br>
+		document.write(b);</td>
+	<td>0050</td>
+	</tr>
+	<tr>
+	<td>padend</td>
+	<td>Change the string into desired lengthby adding character atthe end</td>
+	<td>var a="15";<br>
+		var b=a.padEnd(4,0);<br>
+		document.write(b);</td>
+	<td>1500</td>
+	</tr>
+	<tr>
+	<td>Char At</td>
+	<td>Returns the character at the specified index(Returns empty if negative or unpresent indexis given)</td>
+	<td>const names = "guru";<br>
+		document.write("Input string is " + names, "<br>");<br>
+		b = names.charAt(3);<br>
+		document.write("string after applying the method is: " + names, "<br>", "return value is: " + b);</td>
+	<td>Input string is guru
+		string after applying the method is: guru
+		return value is: u</td>
+	</tr>
+	<tr>
+	<td>CharCodeAt</td>
+	<td>Returns the unicode of the character at the specified index(Returns NaN if negative or unpresent indexis given</td>
+	<td>const names = "guru";<br>
+		document.write("Input string is " + names, "<br>");<br>
+		b = names.charCodeAt(3);<br>
+		document.write("string after applying the method is: " + names, "<br>", "return value is: " + b);</td>
+	<td>Input string is guru
+		string after applying the method is: guru
+		return value is: 117</td>
+	</tr>
+	<tr>
+	<td rowspan="2">Split</td>
+	<td rowspan="2">Coverts string into arrays</td>
+	<td>const names = "guru";<br>
+		document.write("Input string is " + names, "<br>");<br>
+		b = names.split("");<br>
+		document.write("string after applying the method is: " + names, "<br>", "return value is: " + b, "<br>", b[0]);
+		</td>
+	<td>Input string is guru
+		string after applying the method is: guru
+		return value is: g,u,r,u g<br><br><br>
+		</td>
+	</tr>
+	<tr>
+	<td>const names = "raja,guru";<br>
+		document.write("Input string is " + names, "<br>");<br>
+		b = names.split(",");<br>
+		document.write("string after applying the method is: " + names, "<br>", "return value is: " + b, "<br>", b[0]);</td>
+		<td>Input string is raja, guru<br>
+		string after applying the method is: raja, <br>
+		return value is: raja, guru<br>
+		raja</td>
+	</tr>
+	</body>
